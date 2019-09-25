@@ -19,6 +19,10 @@
 
 console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 
+แต่ถ้าท่านกด Remember me ตอน Log in ต้องใช้อันนี้แทน
+
+console.log(window.localStorage.token)
+
 แล้วพระท่านจะเสก Token มาให้ ให้นำไปใส่ใน prop.json
 
 ตัวอย่าง
