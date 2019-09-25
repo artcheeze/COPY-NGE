@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Video.css'
+import './css/Video.css'
 class Video extends Component {
   state = {
     audioURL: "",

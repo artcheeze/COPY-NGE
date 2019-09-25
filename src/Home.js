@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Home.css'
+import './css/Home.css'
 import Video from './Video'
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Prop from './prop.json'
