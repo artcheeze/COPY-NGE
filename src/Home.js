@@ -25,7 +25,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        fetch(Prop.Subject, {
+        fetch('https://learning.sit.kmutt.ac.th/api/videos/list?academic_year=2562&all=true&semester=1&semester_id=16&subject_id='+Prop.SubjectID+'&type=class_record', {
             headers: {
                 Authorization: Prop.Token
             }
