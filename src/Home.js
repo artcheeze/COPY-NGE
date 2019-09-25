@@ -82,7 +82,7 @@ class Home extends Component {
                                     this.state.listCourse.map((e, i) => {
                                         var myDate = new Date(e.video_class.start_time);
                                         var time = e.video_class.start_time.substring(0, 10)
-                                        return <p key={i} onClick={() => this.Selected(e.name, i)}>{i + 1}&nbsp; Room {myDate.getDay() == 1 ? "B": ""}{myDate.getDay() == 2 ? "A": ""}  | <b>{time}</b>&nbsp;<span style={{ color: 'gray' }}>{e.video_class.room_name}</span></p>
+                                        return <p key={i} onClick={() => this.Selected(e.name, i)}>{i + 1}&nbsp; {this.state.nameCourse == "INT401" ? "Room" : null  } {myDate.getDay() == 1 ? "B": ""}{myDate.getDay() == 2 ? "A": ""}  | <b>{time}</b>&nbsp;<span style={{ color: 'gray' }}>{e.video_class.room_name}</span></p>
 
 
                                     })
