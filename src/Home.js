@@ -33,7 +33,7 @@ class Home extends Component {
             .then(res => res.json())
             .then(json => {
                 if (!json.error && json.length!== 0) {
-                    console.log(json)
+                
                     this.setState({selected:json[0].name })
                     this.setState({ listCourse: json })
                     this.setState({nameCourse: json[0].video_class.subject_code})
