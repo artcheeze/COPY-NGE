@@ -55,8 +55,8 @@ class Home extends Component {
     render() {
         return (
 
-            <div className="Home">
-                <div className="VideoBox">
+            <div className="Home animated fadeInDown">
+                <div className="VideoBox ">
                     <Video pBack={this.state.pback} Selected={this.state.selected} />
 
                     <div className="PlaybackRate">
@@ -70,7 +70,7 @@ class Home extends Component {
 
                 </div>
 
-                <div className="ScrollList">
+                <div className="ScrollList ">
 
                     <div className="BoxA" id="style-3">
                         <h2 style={{ alignSelf: 'flex-start' }}>{this.state.nameCourse}</h2>
