@@ -32,19 +32,22 @@ console.log(window.localStorage.token)
 }
 
 ```
-- Subject ( เป็นลิงค์ API ดึงคลิปจาก OLIV หากต้องการเปลี่ยนแปลงวิชาต้องเปลี่ยนจากลิงค์นั้น ซึ่งตอนนี้แปะไว้แค่ลิงค์เดียว เพราะสอบแค่ 401 ตัวเดียว )
+- SubjectID ( เป็นที่ใส่เลข ID ของวิชาที่ท่านต้องการจะดู )
 ```
-หากต้องการเปลี่ยนวิชา ให้ใส่รหัสวิชาที่ subject_id โดยรูปแบบเป็นแบบนี้
+หากต้องการเปลี่ยนวิชา ให้ใส่ id วิชาที่ SubjectID โดยรูปแบบเป็นแบบนี้
 
-"https://learning.sit.kmutt.ac.th/api/videos/list?
-academic_year=2562&all=true&semester=1&semester_id=16&subject_id=ใส่รหัสวิชาตรงนี้&type=class_record"
+{
+ "SubjectID": "ใส่ตรงนี้"
+}
+
 
 เช่น วิชา INT401 มีรหัสเป็น 189 ก็ต้องใส่แบบนี้..
 
-"https://learning.sit.kmutt.ac.th/api/videos/list?
-academic_year=2562&all=true&semester=1&semester_id=16&subject_id=189&type=class_record"
+{
+ "SubjectID": "189"
+}
 
-และต่อจากนี้คือเลขรหัสของแต่ละวิชา (ให้ใช้เลขหน้า = นะครับ)
+และต่อจากนี้คือเลข id ของแต่ละวิชา (ให้ใช้เลขหน้า = นะครับ)
 
 "156 = INT101"
 "153 = INT102"
