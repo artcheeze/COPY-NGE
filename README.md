@@ -12,26 +12,35 @@
 
 ##### ข้างใน prop.json จะมีสองตัวคือ
 
-- Token ( ล็อคอินเข้าเว็บ OLIV แล้วเข้าไปเอา Token จาก Session Stroage ได้เลย ) 
-
+- Token ( ล็อคอินเข้าเว็บ OLIV แล้วเข้าไปเอา Token จาก Session Stroage มาใส่ได้เลย ) 
+```
 ** หากใครไปไม่เป็น ให้เข้าเว็บ OLIV ล็อคอินให้เรียบร้อย กด F12 แล้วไปหน้า Console แล้วก็อปคำสั่งข้างล่างนี้ไปรัน
 
 console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 
 แล้วพระท่านจะเสก Token มาให้ ให้นำไปใส่ใน prop.json
 
-- Subject ( เป็นลิงค์ API ดึงคลิปจาก OLIV หากต้องการเปลี่ยนแปลงวิชาต้องเปลี่ยนจากลิงค์นั้น ซึ่งตอนนี้แปะไว้แค่ลิงค์เดียว เพราะสอบแค่ 401 ตัวเดียว )
+ตัวอย่าง
 
+{
+  "Token" : "asd354875654asd"
+}
+
+```
+- Subject ( เป็นลิงค์ API ดึงคลิปจาก OLIV หากต้องการเปลี่ยนแปลงวิชาต้องเปลี่ยนจากลิงค์นั้น ซึ่งตอนนี้แปะไว้แค่ลิงค์เดียว เพราะสอบแค่ 401 ตัวเดียว )
+```
 หากต้องการเปลี่ยนวิชา ให้ใส่รหัสวิชาที่ subject_id โดยรูปแบบเป็นแบบนี้
 
-"https://learning.sit.kmutt.ac.th/api/videos/list?academic_year=2562&all=true&semester=1&semester_id=16&subject_id=ใส่รหัสวิชาตรงนี้&type=class_record"
+"https://learning.sit.kmutt.ac.th/api/videos/list?
+academic_year=2562&all=true&semester=1&semester_id=16&subject_id=ใส่รหัสวิชาตรงนี้&type=class_record"
 
 เช่น วิชา INT401 มีรหัสเป็น 189 ก็ต้องใส่แบบนี้..
 
-"https://learning.sit.kmutt.ac.th/api/videos/list?academic_year=2562&all=true&semester=1&semester_id=16&subject_id=189&type=class_record"
+"https://learning.sit.kmutt.ac.th/api/videos/list?
+academic_year=2562&all=true&semester=1&semester_id=16&subject_id=189&type=class_record"
 
 และต่อจากนี้คือเลขรหัสของแต่ละวิชา (ให้ใช้เลขหน้า = นะครับ)
-```json
+
 "156 = INT101"
 "153 = INT102"
 "154 = INT103"
@@ -94,10 +103,11 @@ console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 "620 = INT497"
 "626 = INT497"
 "548 = INT497-1"
-```
 
+```
 ** หากต้องการวิชาเพิ่มเติม เปิด Issue ไว้ครับ
 
+** หาอ่านแล้วไม่ค่อยเข้าใจก็เปิด Issue ได้นะครับ เดี๋ยวช่วยๆกันสอน
 
 ### แจ้งให้ทราบ
 
@@ -108,7 +118,7 @@ console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 - พัฒนาและลองใช้แต่บน Window 555555555555555555 MacOS อาจมีปัญหานิดหน่อย แต่แจ้งมาได้ครับ เดี๋ยวปรับโค้ดให้
 - เพื่อนๆสามารถนำไปพัฒนาต่อได้ แต่ควรจะนึกถึงความปลอดภัยของระบบ OLIV เป็นหลัก
 
-### ปัญหาที่ทราบ
+### ปัญหาที่ทราบอยู่แล้ว
 - Chrome เวลาเปลี่ยนแท็บ ตัวคลิปจะหยุดเล่นเอง
 - Responsive ยังไม่สมบูรณ์ที่สุด
 
