@@ -8,17 +8,21 @@ class Video extends Component {
   }
 
   componentDidMount() {
-    var v = document.getElementsByClassName("Video")[0]
-    var a = document.getElementsByClassName("Audio")[0]
-    a.play();
-    v.play();
+    if(this.props.Selected !== ""){
+      var v = document.getElementsByClassName("Video")[0]
+      var a = document.getElementsByClassName("Audio")[0]
+      a.play();
+      v.play();
+  
+      a.playbackRate = this.state.playRate;
+      v.playbackRate = this.state.playRate;
+    }
 
-    a.playbackRate = this.state.playRate;
-    v.playbackRate = this.state.playRate;
+
   }
 
   componentDidUpdate() {
-
+    if(this.props.Selected !== ""){
     var v = document.getElementsByClassName("Video")[0]
     var a = document.getElementsByClassName("Audio")[0]
 
@@ -28,7 +32,7 @@ class Video extends Component {
     a.playbackRate = this.state.playRate;
     v.playbackRate = this.state.playRate;
 
-
+    }
   }
 
 

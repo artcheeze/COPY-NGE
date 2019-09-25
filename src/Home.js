@@ -10,6 +10,7 @@ class Home extends Component {
         pback: 1,
         listCourse: [],
         selected: "",
+        nameCourse: "NONE",
         index: 0
     }
 
@@ -32,7 +33,10 @@ class Home extends Component {
             .then(res => res.json())
             .then(json => {
                 if (!json.error) {
+               
+                    this.setState({selected:json[0].name })
                     this.setState({ listCourse: json })
+                    this.setState({nameCourse: json[0].video_class.subject_code})
                 } else {
                     alert("ใส่ Token ด้วยยยยยยย")
                 }
@@ -69,7 +73,7 @@ class Home extends Component {
                 <div className="ScrollList">
 
                     <div className="BoxA" id="style-3">
-                        <h2 style={{ alignSelf: 'flex-start' }}>INT 401</h2>
+                        <h2 style={{ alignSelf: 'flex-start' }}>{this.state.nameCourse}</h2>
 
 
                         {
