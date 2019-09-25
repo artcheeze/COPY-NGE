@@ -32,13 +32,13 @@ class Home extends Component {
         })
             .then(res => res.json())
             .then(json => {
-                if (!json.error) {
-               
+                if (!json.error && json.length!== 0) {
+                    console.log(json)
                     this.setState({selected:json[0].name })
                     this.setState({ listCourse: json })
                     this.setState({nameCourse: json[0].video_class.subject_code})
                 } else {
-                    alert("ใส่ Token ด้วยยยยยยย")
+                    alert("ใส่ Token ด้วยยยยยยย หรือ ถ้าใส่แล้วอาจจะเป็นเพราะว่าวิชานั้นไม่มีเนื้อหา")
                 }
 
 
