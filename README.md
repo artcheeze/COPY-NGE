@@ -13,15 +13,15 @@
 ##### ข้างใน prop.json จะมีสองตัวคือ
 
 - Token ( ล็อคอินเข้าเว็บ OLIV แล้วเข้าไปเอา Token จาก Session Stroage ได้เลย ) 
-
+```
 ** หากใครไปไม่เป็น ให้เข้าเว็บ OLIV ล็อคอินให้เรียบร้อย กด F12 แล้วไปหน้า Console แล้วก็อปคำสั่งข้างล่างนี้ไปรัน
 
 console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 
 แล้วพระท่านจะเสก Token มาให้ ให้นำไปใส่ใน prop.json
-
+```
 - Subject ( เป็นลิงค์ API ดึงคลิปจาก OLIV หากต้องการเปลี่ยนแปลงวิชาต้องเปลี่ยนจากลิงค์นั้น ซึ่งตอนนี้แปะไว้แค่ลิงค์เดียว เพราะสอบแค่ 401 ตัวเดียว )
-
+```
 หากต้องการเปลี่ยนวิชา ให้ใส่รหัสวิชาที่ subject_id โดยรูปแบบเป็นแบบนี้
 
 "https://learning.sit.kmutt.ac.th/api/videos/list?academic_year=2562&all=true&semester=1&semester_id=16&subject_id=ใส่รหัสวิชาตรงนี้&type=class_record"
@@ -31,7 +31,7 @@ console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 "https://learning.sit.kmutt.ac.th/api/videos/list?academic_year=2562&all=true&semester=1&semester_id=16&subject_id=189&type=class_record"
 
 และต่อจากนี้คือเลขรหัสของแต่ละวิชา (ให้ใช้เลขหน้า = นะครับ)
-```json
+
 "156 = INT101"
 "153 = INT102"
 "154 = INT103"
@@ -94,8 +94,8 @@ console.log(window.sessionStorage.token) //Khor-Token-Nhoy-Kaaaaaaaaaa-saaa-tuuu
 "620 = INT497"
 "626 = INT497"
 "548 = INT497-1"
-```
 
+```
 ** หากต้องการวิชาเพิ่มเติม เปิด Issue ไว้ครับ
 
 
