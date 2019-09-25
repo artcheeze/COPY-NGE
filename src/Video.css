@@ -1,0 +1,22 @@
+.Player{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Audio {
+    width: 90%;
+    background-color: #f1f3f4;
+    outline: none;
+}
+
+.Video {
+    width:100%;
+}
+
+@media screen and (max-width: 600px) {
+
+
+}
