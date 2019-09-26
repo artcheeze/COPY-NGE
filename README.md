@@ -30,6 +30,7 @@ console.log(window.localStorage.token)
 
 {
   "Token" : "asd354875654asd"
+  ...
 }
 
 ```
@@ -38,6 +39,7 @@ console.log(window.localStorage.token)
 หากต้องการเปลี่ยนวิชา ให้ใส่ id วิชาที่ SubjectID โดยรูปแบบเป็นแบบนี้
 
 {
+ ...
  "SubjectID": "ใส่ตรงนี้"
 }
 
@@ -45,6 +47,7 @@ console.log(window.localStorage.token)
 เช่น วิชา INT401 มีรหัสเป็น 189 ก็ต้องใส่แบบนี้..
 
 {
+ ...
  "SubjectID": "189"
 }
 
